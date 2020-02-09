@@ -15,9 +15,9 @@ Perform the following steps.
 
   3. Install Git: `sudo yum install git`
 
-  4. Grab the script: `git clone https://github.com/kikinovak/centos-setup`
+  4. Grab the script: `git clone https://gitlab.com/kikinovak/centos-7.git`
 
-  5. Change into the new directory: `cd centos-setup`
+  5. Change into the new directory: `cd centos-7`
 
   6. Run the script: `sudo ./centos-setup.sh --setup`
 

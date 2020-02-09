@@ -1,0 +1,2 @@
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="00:1a:a0:10:a7:2f", ATTR{type}=="1", KERNEL=="eth*", NAME="wan0"
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="00:27:19:f1:bc:3a", ATTR{type}=="1", KERNEL=="eth*", NAME="lan0"

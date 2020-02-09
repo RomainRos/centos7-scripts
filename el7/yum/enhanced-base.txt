@@ -1,3 +1,4 @@
+# Enhanced base system
 abrt
 abrt-addon-ccpp
 abrt-addon-kerneloops

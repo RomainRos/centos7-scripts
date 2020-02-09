@@ -249,7 +249,7 @@ strip_system() {
   mkdir ${PKGINFO}
   unset REMOVE
   echo 'Creating database.'
-  BASE=$(egrep -v '(^\#)|(^\s+$)' ${CWD}/${VERSION}/yum/base.txt)
+  BASE=$(egrep -v '(^\#)|(^\s+$)' ${CWD}/${VERSION}/yum/enhanced-base.txt)
   for PACKAGE in ${BASE}
   do
     touch ${PKGINFO}/${PACKAGE}

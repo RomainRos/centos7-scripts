@@ -90,13 +90,13 @@ configure_repos() {
   echo 'Configuring CR package repository.'
   cat ${CWD}/${VERSION}/yum/CentOS-CR.repo > /etc/yum.repos.d/CentOS-CR.repo
   # Enable [sclo] repos with a priority of 1.
+  echo 'Configuring SCLo package repositories.'
   if ! rpm -q centos-release-scl > /dev/null 2>&1
   then
-    echo 'Configuring SCLo package repositories.'
     yum -y install centos-release-scl >> ${LOG} 2>&1
-    cat ${CWD}/${VERSION}/yum/CentOS-SCLo-scl-rh.repo > /etc/yum.repos.d/CentOS-SCLo-scl-rh.repo
-    cat ${CWD}/${VERSION}/yum/CentOS-SCLo-scl.repo > /etc/yum.repos.d/CentOS-SCLo-scl.repo
   fi
+  cat ${CWD}/${VERSION}/yum/CentOS-SCLo-scl-rh.repo > /etc/yum.repos.d/CentOS-SCLo-scl-rh.repo
+  cat ${CWD}/${VERSION}/yum/CentOS-SCLo-scl.repo > /etc/yum.repos.d/CentOS-SCLo-scl.repo
   # Enable Delta RPM.
   if ! rpm -q deltarpm > /dev/null 2>&1
   then
@@ -108,31 +108,34 @@ configure_repos() {
   echo 'This might take a moment...'
   yum -y update >> ${LOG} 2>&1
   # Install Yum-Priorities plugin
-  echo 'Installing Yum-Priorities plugin.'
-  yum -y install yum-plugin-priorities >> ${LOG} 2>&1
+  if ! rpm -q yum-plugin-priorities > /dev/null 2>&1
+  then
+    echo 'Installing Yum-Priorities plugin.'
+    yum -y install yum-plugin-priorities >> ${LOG} 2>&1
+  fi
   # Enable [epel] repo with a priority of 10.
+  echo 'Configuring EPEL package repository.' 
   if ! rpm -q epel-release > /dev/null 2>&1
   then
-    echo 'Configuring EPEL package repository.' 
     yum -y install epel-release >> ${LOG} 2>&1
-    cat ${CWD}/${VERSION}/yum/epel.repo > /etc/yum.repos.d/epel.repo
-    cat ${CWD}/${VERSION}/yum/epel-testing.repo > /etc/yum.repos.d/epel-testing.repo
   fi
+  cat ${CWD}/${VERSION}/yum/epel.repo > /etc/yum.repos.d/epel.repo
+  cat ${CWD}/${VERSION}/yum/epel-testing.repo > /etc/yum.repos.d/epel-testing.repo
   # Configure [elrepo] and [elrepo-kernel] repos without activating them.
+  echo 'Configuring ELRepo package repositories.'
   if ! rpm -q elrepo-release > /dev/null 2>&1
   then
-    echo 'Configuring ELRepo package repositories.'
     yum -y localinstall \
     ${ELREPO}/elrepo-release-7.0-4.${VERSION}.elrepo.noarch.rpm >> ${LOG} 2>&1
-    cat ${CWD}/${VERSION}/yum/elrepo.repo > /etc/yum.repos.d/elrepo.repo
   fi
+  cat ${CWD}/${VERSION}/yum/elrepo.repo > /etc/yum.repos.d/elrepo.repo
   # Enable [lynis] repo with a priority of 5.
+  echo 'Configuring Lynis package repository.'
   if [ ! -f /etc/yum.repos.d/lynis.repo ]
   then
-    echo 'Configuring Lynis package repository.'
     rpm --import ${CISOFY}/keys/cisofy-software-rpms-public.key >> ${LOG} 2>&1
-    cat ${CWD}/${VERSION}/yum/lynis.repo > /etc/yum.repos.d/lynis.repo
   fi
+  cat ${CWD}/${VERSION}/yum/lynis.repo > /etc/yum.repos.d/lynis.repo
 }
 
 install_extras() {

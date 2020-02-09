@@ -1,11 +1,8 @@
-# CentOS-SCLo-sclo.repo
-#
-# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo for more
-# information
+# /etc/yum.repos.d/CentOS-SCLo-sclo.repo
 
 [centos-sclo-sclo]
 name=CentOS-7 - SCLo sclo
-baseurl=http://ftp.free.fr/mirrors/ftp.centos.org/$releasever/sclo/$basearch/sclo/
+baseurl=http://mirror.centos.org/centos/7/sclo/$basearch/sclo/
 gpgcheck=1
 enabled=1
 priority=1

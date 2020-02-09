@@ -1,9 +1,9 @@
-# CentOS-CR.repo
+# /etc/yum.repos.d/CentOS-CR.repo
 
 [cr]
 enabled=1
 priority=1
 name=CentOS-$releasever - cr
-baseurl=http://ftp.free.fr/mirrors/ftp.centos.org/$releasever/cr/$basearch/
+baseurl=http://mirror.centos.org/centos/$releasever/cr/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7

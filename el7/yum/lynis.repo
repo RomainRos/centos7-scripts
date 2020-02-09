@@ -1,3 +1,5 @@
+# /etc/yum.repos.d/lynis.repo
+
 [lynis]
 name=CISOfy Software - Lynis package
 baseurl=https://packages.cisofy.com/community/lynis/rpm/

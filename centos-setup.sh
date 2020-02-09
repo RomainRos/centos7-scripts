@@ -26,7 +26,7 @@ EXTRA=$(egrep -v '(^\#)|(^\s+$)' ${CWD}/${VERSION}/yum/extra-packages.txt)
 USERS="$(ls -A /home)"
 
 # Mirrors
-ELREPO="http://mirrors.ircam.fr/pub/elrepo/elrepo/${VERSION}/x86_64/RPMS"
+ELREPO="https://elrepo.org/linux/elrepo/${VERSION}/x86_64/RPMS"
 CISOFY="https://packages.cisofy.com"
 
 # Log

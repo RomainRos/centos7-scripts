@@ -2,7 +2,7 @@
 Firewall scripts for Red Hat Enterprise Linux & CentOS
 ======================================================
 
-(c) Niki Kovacs 2019 
+  (c) Niki Kovacs 2019 
 
 This repository provides a variety of firewall template scripts for servers
 running Red Hat Enterprise Linux or CentOS.

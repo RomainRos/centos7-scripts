@@ -1,0 +1,4 @@
+# /etc/sysconfig/network-scripts/ifcfg-enp3s1
+DEVICE=enp3s1
+TYPE=Ethernet
+ONBOOT=no

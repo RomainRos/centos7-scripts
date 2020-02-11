@@ -7,10 +7,10 @@
 # Basic firewall for a router running Red Hat Enterprise Linux or CentOS.
 
 # Internet
-IFACE_INET='enp1s0'
+IFACE_INET='enp2s0'
 
 # Local network
-IFACE_LAN='enp2s0'
+IFACE_LAN='enp3s1'
 ROUTER_IP='192.168.2.1'
 LAN='192.168.2.0/24'
 

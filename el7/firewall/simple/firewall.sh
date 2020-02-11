@@ -7,7 +7,7 @@
 # Basic firewall for a LAN server running Red Hat Enterprise Linux or CentOS.
 
 # Local network
-IFACE_LAN='enp63s0'
+IFACE_LAN='enp2s0'
 
 # Display the usage. 
 usage() {

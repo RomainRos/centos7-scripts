@@ -19,6 +19,7 @@ usage() {
   echo 'Simple server firewall.'
   echo '  --start    Start firewall.'
   echo '  --stop     Stop firewall.'
+  echo '  --restart  Restart firewall.'
   echo '  --status   Display firewall status.'
   echo '  --help     Show this message.'
 }
@@ -161,7 +162,7 @@ then
   exit 1
 fi
 case "${OPTION}" in
-  --start) 
+  --start|--restart) 
     firewall_stop
     firewall_start
     firewall_save

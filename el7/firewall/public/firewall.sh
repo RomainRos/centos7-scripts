@@ -11,7 +11,7 @@
 IFACE_INET='eth0'
 
 # Use fail2ban ? (yes|no)
-USE_FAIL2BAN='yes'
+USE_FAIL2BAN='no'
 
 # Display the usage. 
 usage() {

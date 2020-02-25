@@ -45,8 +45,7 @@ usage() {
   echo '  -6, --ipv4     Disable IPv6 and reconfigure basic services.'
   echo '  -7, --sudo     Configure persistent password for sudo.'
   echo '  -8, --setup    Perform all of the above in one go.'
-  echo '  -9, --nat      Enable packet forwarding.'
-  echo '  -0, --strip    Revert back to enhanced base system.'
+  echo '  -9, --strip    Revert back to enhanced base system.'
   echo '  -h, --help     Show this message.'
   echo "Logs are written to ${LOG}."
 }
@@ -229,14 +228,6 @@ configure_sudo() {
   fi
 }
 
-enable_nat() {
-  # Enable packet forwarding.
-  echo 'Enabling packet forwarding.'
-  cat ${CWD}/${VERSION}/sysctl.d/enable-ip-forwarding.conf > \
-    /etc/sysctl.d/enable-ip-forwarding.conf
-  sysctl -p --load /etc/sysctl.d/enable-ip-forwarding.conf >> $LOG 2>&1
-}
-
 strip_system() {
   # Remove all packages that are not part of the enhanced base system.
   echo 'Stripping system.'
@@ -325,10 +316,7 @@ case "${OPTION}" in
     disable_ipv6
     configure_sudo
     ;;
-  -9|--nat) 
-    enable_nat
-    ;;
-  -0|--strip) 
+  -9|--strip) 
     strip_system
     ;;
   -h|--help) 

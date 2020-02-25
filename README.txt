@@ -90,10 +90,6 @@ Perform all of the above in one go :
 
   # ./centos-setup.sh --setup
 
-Enable packet forwarding :
-
-  # ./centos-setup.sh --nat
-
 Strip packages and revert back to an enhanced base system :
 
   # ./centos-setup.sh --strip

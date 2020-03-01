@@ -1,3 +1,0 @@
-  # XMPP 
-  iptables --append INPUT --protocol tcp --in-interface ${IFACE_INET} \
-    --dport 5222 --jump ACCEPT

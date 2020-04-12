@@ -1,7 +1,7 @@
 # /etc/yum.repos.d/CentOS-CR.repo
 
 [cr]
-enabled=1
+enabled=0
 priority=1
 name=CentOS-$releasever - cr
 baseurl=http://mirror.centos.org/centos/$releasever/cr/$basearch/

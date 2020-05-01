@@ -1,5 +1,4 @@
 # Useless packages
 ntp
-ntpdate
 iptables-services
 iperf

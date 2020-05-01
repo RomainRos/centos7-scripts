@@ -376,6 +376,7 @@ nss-tools
 nss-util
 ntfs-3g
 ntfsprogs
+ntpdate
 ntsysv
 numactl-libs
 openldap

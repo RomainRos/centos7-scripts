@@ -55,6 +55,7 @@ centos-release-scl
 centos-release-scl-rh
 checkpolicy
 chkconfig
+chrony
 coreutils
 cpio
 cracklib
@@ -112,6 +113,7 @@ filesystem
 findutils
 fipscheck
 fipscheck-lib
+firewalld
 firewalld-filesystem
 fontconfig
 fontpackages-filesystem
@@ -170,7 +172,6 @@ iprutils
 ipset
 ipset-libs
 iptables
-iptables-services
 iputils
 irqbalance
 ivtv-firmware
@@ -191,7 +192,6 @@ iwl6000g2a-firmware
 iwl6000g2b-firmware
 iwl6050-firmware
 iwl7260-firmware
-iwl7265-firmware
 jansson
 jasper-libs
 jbigkit-libs
@@ -357,6 +357,11 @@ ncurses-base
 ncurses-libs
 nettle
 net-tools
+NetworkManager
+NetworkManager-libnm
+NetworkManager-team
+NetworkManager-tui
+NetworkManager-wifi
 newt
 newt-python
 nmap
@@ -371,7 +376,6 @@ nss-tools
 nss-util
 ntfs-3g
 ntfsprogs
-ntpdate
 ntsysv
 numactl-libs
 openldap
